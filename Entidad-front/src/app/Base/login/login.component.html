@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="bg-img" style="background: url('assets/Fondo.jpg'); background-size: 100% 100%;">
+    <div class="content" style="background: rgba(255, 255, 255, 0.9);">
+      <header style="color: #000;">Inicio de Sesión</header>
+      <form >
+        <div class="row">
+          <div class="col-sm">
+            <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label>Usuario</mat-label>
+              <input matInput placeholder="Usuario"  maxlength="50">
+            </mat-form-field>
+          </div>
+          <div class="col-sm">
+            <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label>Contraseña</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'" placeholder="Contraseña" maxlength="50" #textComponent>
+              <mat-icon matSuffix (click)="hide = !hide"
+                  style="cursor: pointer">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>
+          </div>
+        </div>
+        <br><br>
+        <div class="field">
+          <input type="submit" (click)="iniciarSesion()" value="INICIAR">
+        </div>
+      </form>
+      <div class="login" style="color: #000;">Navegadores Disponibles
+      </div>
+      <div class="links">
+        <div class="facebook">
+          <img src="assets/Chrome.png" style="width: 40px; height: 40px;">
+        </div>
+        <div class="">
+          <img src="assets/Edge.png" style="width: 40px; height: 40px;">
+        </div>
+      </div><hr  width=45% size=8 class="center">
+    </div>
+  </div>
+</body>
+</html>
